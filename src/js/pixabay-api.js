@@ -1,6 +1,4 @@
 import axios from 'axios';
-
-
         
 export function getImagesByQuery(query) {
     const server = axios.create({

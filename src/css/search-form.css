@@ -137,15 +137,14 @@ label {
   display: none;
 }
 
-.js-gallery {
+.gallery {
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
-
   justify-content: center;
 }
 
-.js-item-gallery {
+.js-gallery-item {
   display: flex;
   flex-direction: column;
   border: 1px solid #808080;
@@ -153,7 +152,7 @@ label {
   height: 200px;
 }
 
-.js-image-area {
+.js-image-link {
   width: 360px;
   height: 152px;
   /* overflow: hidden; */
@@ -181,12 +180,12 @@ label {
   background: #fff;
 }
 
-.js-likes .js-views .js-comments .js-downloads {
+.js-info {
   display: flex;
   flex-direction: column;
 }
 
-h2 {
+.js-title {
   font-weight: 600;
   font-size: 12px;
   line-height: 1.33333;
@@ -195,7 +194,7 @@ h2 {
   text-align: center;
 }
 
-p {
+.js-value {
   font-weight: 400;
   font-size: 12px;
   line-height: 2;

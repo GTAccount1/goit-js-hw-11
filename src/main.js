@@ -10,7 +10,6 @@ import "izitoast/dist/css/iziToast.min.css";
 const refs = {
     searchForm: document.querySelector('.form'),
     searchInput: document.querySelector('.form input'),
-   
 }
 
 refs.searchForm.addEventListener("submit", e => {
