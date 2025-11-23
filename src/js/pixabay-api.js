@@ -1,9 +1,7 @@
 import axios from 'axios';
 
-import iziToast from "izitoast";
-import "izitoast/dist/css/iziToast.min.css";
 
-
+        
 export function getImagesByQuery(query) {
     const server = axios.create({
         baseURL: 'https://pixabay.com/api/',
@@ -13,22 +11,12 @@ export function getImagesByQuery(query) {
             image_type: "photo",
             orientation: "horizontal",
             safesearch: "true",
-        },
-       });
-    return server.get().then(response => {
-        if (response.data.hits.length === 0) {
-            iziToast.info({
-            title: 'Info',
-            message: "Sorry, there are no images matching your search query. Please try again!"
-            });
-            return; 
-        } 
-        return response.data.hits;
-}).catch(error => {
-    console.log("error", error);
-    throw error; 
-    });
-
-
-
+    },
+});
+    return server.get()
+        .then(response => response.data.hits)
+        .catch(error => {
+            console.log("API error", error);
+            throw error;
+        });
 };
